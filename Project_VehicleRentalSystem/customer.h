@@ -11,17 +11,20 @@ class Customer : public QObject
 public:
     explicit Customer(QObject *parent = nullptr);
 
+    //Constructors
     Customer();
     Customer (int custid);
     Customer (int custid, QDate added);
     Customer (int custid, QString phonenum, QString emailadd, QDate added);
     ~Customer();
 
+    //set functions
     void setCustomerID (int custid);
     void setPhoneNumber (QString phonenum);
     void setEmail (QString emailadd);
     void setDate_added(QDate added);
 
+    //get functions
     int getCustomerID();
     char getCustomerPhoneNumber();
     QString getEmail();

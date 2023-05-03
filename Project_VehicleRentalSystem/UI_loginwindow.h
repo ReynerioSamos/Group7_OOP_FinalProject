@@ -1,5 +1,5 @@
-#ifndef LOGINWINDOW_H
-#define LOGINWINDOW_H
+#ifndef UI_LOGINWINDOW_H
+#define UI_LOGINWINDOW_H
 
 #include <QMainWindow>
 
@@ -18,4 +18,4 @@ public:
 private:
     Ui::LoginWindow *ui;
 };
-#endif // LOGINWINDOW_H
+#endif // UI_LOGINWINDOW_H
