@@ -2,23 +2,20 @@
 Group 7 End of Semester Project for Object Oriented Programming Application
 Members: Reynerio Samos, Julius Shol, Martin Uyi, Kelvin Gordon
 
-Vehicle, Watercraft and Aircraft Rental System
-
-A customer would be able to rent Transportation as a land vehicle, watercraft or aircraft through a clerk who would also approve it for a daily rate.
-They could also contact a suitable driver, captain or pilot to also to be included in the bill.
+Vehicle Rental System
 
 
-Customers can be individuals or Companies
+A customer would be able to rent a vehicle through a clerk who would also approve it for a daily rate.
+They could also contact a suitable driver to also be included in the bill.
 
-Employees include Clerks, Managers and Maintenance
 
-Operators can be Drivers, Captains and Pilots
+Customers can be Individuals or Companies
 
-Transport can be either a vehicle, watercraft of aircraft
+Persons are either employees, drivers, or technicians
+Employees are either administrators, managers, clerks or maintenance
 
-Vehicles can be cars, trucks, busses, motorbikes
-Watercraft can be Dingys, Private Motor Boat, Commercial Motorboats (Like catamarans)
-Aircrafts can be Airplanes, Rotorcraft, and Seaplanes
+Vehicles can be a Car, Truck, Bus or Motorbike
 
-Customers enter a contract when renting a transport, which includes
-the customer, transport, number of days, rate, clerk who approved, date approved, date to be returned and operator if requested
+Customers talk to a clerk when renting a vehicle who would make and be able to approve a rental request form which includes the customer, vehicle, number of days, rate, clerk who approved, date approved, date to be returned and driver if requested.
+
+Clerks would also be able to make vehicle maintenance requests as well as vehicle repair requests
