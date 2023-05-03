@@ -19,7 +19,7 @@ public:
     void setLastName(QString lname);
     void setDoB(QDate dob);
     void setPhoneNum( QString phonenum);
-    void setEmail(QString email)
+    void setEmail(QString email);
 
     //get Functions
     int getPersonID();
