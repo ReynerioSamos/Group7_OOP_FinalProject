@@ -1,4 +1,4 @@
---Database and tables creation for Group 7 Vehicle Rental System
+-- Database and tables creation for Group 7 Vehicle Rental System
 -- Group Memebers
 -- Reynerio Samos, Julius Shol, Martin Uyi, Kelvin Gordon
 
@@ -49,47 +49,47 @@ Motorbike
 
 */
 
---create database
-CREATE DATABASE [IF NOT EXISTS] vehicle_rental_service_db
+-- create database
+CREATE DATABASE [IF NOT EXISTS] vehicle_rental_service_db;
 
 -- reference tables
 
-CREATE TABLE [IF NOT EXISTS] TransmissionTypes (
+CREATE TABLE IF NOT EXISTS TransmissionTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT TransmissionTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] FuelTypes (
+CREATE TABLE IF NOT EXISTS FuelTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT FuelTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] DrivetrainTypes (
+CREATE TABLE IF NOT EXISTS DrivetrainTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT DrivetrainTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] RoadTypes (
+CREATE TABLE IF NOT EXISTS RoadTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT RoadTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] TruckClasses (
+CREATE TABLE IF NOT EXISTS TruckClasses (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT TruckClassID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] HitchTypes (
+CREATE TABLE IF NOT EXISTS HitchTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
@@ -103,21 +103,21 @@ CREATE TABLE [IF NOT EXISTS] BusTypes (
     CONSTRAINT BusTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] BikeTypes (
+CREATE TABLE IF NOT EXISTS BikeTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT BikeTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] LicenseClasses (
+CREATE TABLE IF NOT EXISTS LicenseClasses (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
     CONSTRAINT LicenseClassID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] Positions (
+CREATE TABLE IF NOT EXISTS Positions (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
@@ -127,7 +127,7 @@ CREATE TABLE [IF NOT EXISTS] Positions (
 -- Object Tables
 
 -- base class table
-CREATE TABLE [IF NOT EXISTS] Customers (
+CREATE TABLE IF NOT EXISTSCustomers (
     ID int NOT NULL auto_increment,
     phoneNumber varchar(15) NOT NULL,
     email varchar(100)NOT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE [IF NOT EXISTS] Customers (
     CONSTRAINT CustomerID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] Individuals (
+CREATE TABLE IF NOT EXISTS Individuals (
     ID int NOT NULL auto_increment,
     CustomerID int NOT NULL,
     firstName varchar(50) NOT NULL,
@@ -147,18 +147,18 @@ CREATE TABLE [IF NOT EXISTS] Individuals (
     CONSTRAINT CustomerID_FK foreign key(CustomerID) REFERENCES Customers(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] Companies (
+CREATE TABLE IF NOT EXISTS Companies (
     ID int NOT NULL auto_increment,
     CustomerID int NOT NULL,
     companyName varchar(100) NOT NULL,
     dateFounded date,
 
     CONSTRAINT CompanyID_PK primary key(ID),
-    CONSTRAINT CustomerID-FK foreign key(CustomerID) REFERENCES Customers(ID)
+    CONSTRAINT CustomerID_FK foreign key(CustomerID) REFERENCES Customers(ID)
 );
 
---base class table
-CREATE TABLE [IF NOT EXISTS] Persons (
+-- base class table
+CREATE TABLE IF NOT EXISTS Persons (
     ID int NOT NULL auto_increment,
     firstName varchar(50) NOT NULL,
     lastName varchar(50) NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE [IF NOT EXISTS] Persons (
     CONSTRAINT PersonID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] Employees (
+CREATE TABLE IF NOT EXISTS Employees (
     ID int NOT NULL auto_increment,
     PersonID int NOT NULL,
     PositionID int NOT NULL,
@@ -184,7 +184,7 @@ CREATE TABLE [IF NOT EXISTS] Employees (
 
 );
 
-CREATE TABLE [IF NOT EXISTS] Drivers (
+CREATE TABLE IF NOT EXISTS Drivers (
     ID int NOT NULL auto_increment,
     PersonID int NOT NULL,
     LicenseClassID int NOT NULL,
@@ -196,7 +196,7 @@ CREATE TABLE [IF NOT EXISTS] Drivers (
 
 );
 
-CREATE TABLE [IF NOT EXISTS] Technicians (
+CREATE TABLE IF NOT EXISTS Technicians (
     ID int NOT NULL auto_increment,
     PersonID int NOT NULL,
     typeofTechnician varchar (100),
@@ -207,7 +207,7 @@ CREATE TABLE [IF NOT EXISTS] Technicians (
 );
 
 -- base class table
-CREATE TABLE [IF NOT EXISTS] Vehicles (
+CREATE TABLE IF NOT EXISTS Vehicles (
     ID int NOT NULL auto_increment,
     totalMiles int(10) NOT NULL,
     make varchar(50) NOT NULL,
@@ -242,7 +242,7 @@ CREATE TABLE [IF NOT EXISTS] Cars (
 
 );
 
-CREATE TABLE [IF NOT EXISTS] Trucks (
+CREATE TABLE IF NOT EXISTS Trucks (
     ID int NOT NULL auto_increment,
     VehicleID int NOT NULL,
     TruckClassID int NOT NULL,
@@ -254,13 +254,13 @@ CREATE TABLE [IF NOT EXISTS] Trucks (
     mpg int(4) NOT NULL,
 
     CONSTRAINT TruckID_PK primary key(ID),
-    CONSTRAINT VehicleID_FK foreign key(VehicleID) REERENCES Vehicles(ID),
+    CONSTRAINT VehicleID_FK foreign key(VehicleID) REFERENCES Vehicles(ID),
     CONSTRAINT TruckClassID_FK foreign key(TruckClassID) REFERENCES TruckClasses(ID),
     CONSTRAINT HitchTypeID_FK foreign key(HitchTypeID) REFERENCES HitchTypes(ID)
 
 );
 
-CREATE TABLE [IF NOT EXISTS] Busses (
+CREATE TABLE IF NOT EXISTS Busses (
     ID int NOT NULL auto_increment,
     VehicleID int NOT NULL,
     bathroom tinyint(1) NOT NULL,
@@ -277,7 +277,7 @@ CREATE TABLE [IF NOT EXISTS] Busses (
 
 );
 
-CREATE TABLE [IF NOT EXISTS] Motorbikes (
+CREATE TABLE IF NOT EXISTS Motorbikes (
     ID int NOT NULL auto_increment,
     VehicleID int NOT NULL,
     engine varchar(100) NOT NULL,
