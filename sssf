@@ -1,0 +1,40 @@
+[33mcommit 7f67a8edbf3dcc046e47265939aff8dea91c0f9b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Reynerio Samos <Reynerio.Samos@gmail.com>
+Date:   Wed May 3 13:32:10 2023 -0600
+
+            new file:   Project_VehicleRentalSystem/.gitignore
+            new file:   Project_VehicleRentalSystem/Project_VehicleRentalSystem.pro
+            new file:   Project_VehicleRentalSystem/company.cpp
+            new file:   Project_VehicleRentalSystem/company.h
+            new file:   Project_VehicleRentalSystem/customer.cpp
+            new file:   Project_VehicleRentalSystem/customer.h
+            new file:   Project_VehicleRentalSystem/individual.cpp
+            new file:   Project_VehicleRentalSystem/individual.h
+            new file:   Project_VehicleRentalSystem/loginwindow.cpp
+            new file:   Project_VehicleRentalSystem/loginwindow.h
+            new file:   Project_VehicleRentalSystem/loginwindow.ui
+            new file:   Project_VehicleRentalSystem/main.cpp
+            new file:   Project_VehicleRentalSystem/person.cpp
+            new file:   Project_VehicleRentalSystem/person.h
+
+[33mcommit a8228c8f54b0753503bfda12487d7feabbe9859b[m
+Author: Reynerio Samos <Reynerio.Samos@gmail.com>
+Date:   Wed May 3 12:15:24 2023 -0600
+
+    Update README.md
+    
+    Updated the specifications to be more accurate
+
+[33mcommit 84593f05c6fef9f63cc9741fb39bd6963cefbc08[m
+Author: Reynerio Samos <Reynerio.Samos@gmail.com>
+Date:   Wed May 3 10:04:34 2023 -0600
+
+    Update README.md
+    
+    added group members and initial project description
+
+[33mcommit 80d60bff269d2f30da74908cdb978fae6b8e48cc[m
+Author: Reynerio Samos <Reynerio.Samos@gmail.com>
+Date:   Wed May 3 09:56:57 2023 -0600
+
+    Initial commit

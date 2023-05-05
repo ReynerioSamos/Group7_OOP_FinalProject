@@ -50,7 +50,7 @@ Motorbike
 */
 
 -- create database
-CREATE DATABASE [IF NOT EXISTS] vehicle_rental_service_db;
+CREATE DATABASE IF NOT EXISTS vehicle_rental_service_db;
 
 -- reference tables
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS HitchTypes (
     CONSTRAINT HitchTypeID_PK primary key(ID)
 );
 
-CREATE TABLE [IF NOT EXISTS] BusTypes (
+CREATE TABLE IF NOT EXISTS BusTypes (
     ID int NOT NULL auto_increment,
     Descr varchar(100) NOT NULL,
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS Positions (
 -- Object Tables
 
 -- base class table
-CREATE TABLE IF NOT EXISTSCustomers (
+CREATE TABLE IF NOT EXISTS Customers (
     ID int NOT NULL auto_increment,
     phoneNumber varchar(15) NOT NULL,
     email varchar(100)NOT NULL,
@@ -230,7 +230,7 @@ CREATE TABLE IF NOT EXISTS Vehicles (
 
 );
 
-CREATE TABLE [IF NOT EXISTS] Cars (
+CREATE TABLE IF NOT EXISTS Cars (
     ID int NOT NULL auto_increment,
     VehicleID int NOT NULL,
     mpg_or_kwh int(4) NOT NULL,
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS Busses (
     mpg int (4) NOT NULL,
     busLength int(3) NOT NULL,
     busWidth int (3) NOT NULL,
-    busHeight int(3) NOT NULL
+    busHeight int(3) NOT NULL,
 
     CONSTRAINT BusID_PK primary key(ID),
     CONSTRAINT VehicleID_FK foreign key(VehicleID) REFERENCES Vehicles(ID),
