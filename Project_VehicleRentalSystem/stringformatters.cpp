@@ -1,8 +1,11 @@
 #include "stringformatters.h"
+#include <QString>
+#include <QRegularExpression>
+#include <QList>
 
 QString stringformatters::formatPhoneNumber(QString phoneNumber) {
     // Remove any non-numeric characters from the phone number
-    phoneNumber.remove(QRegExp("[^0-9]"));
+    phoneNumber.remove(QRegularExpression("[^0-9]"));
 
     // Check if the phone number is long enough
     if (phoneNumber.length() < 10) {
@@ -14,6 +17,8 @@ QString stringformatters::formatPhoneNumber(QString phoneNumber) {
         .arg(phoneNumber.mid(0, 3))
         .arg(phoneNumber.mid(3, 3))
         .arg(phoneNumber.mid(6, 4));
+
+    return formattedPhoneNumber;
 }
 
 QString stringformatters::formatEmailAddress(QString emailAddress) {

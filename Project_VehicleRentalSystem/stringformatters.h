@@ -7,6 +7,6 @@ class stringformatters{
 public:
     static QString formatPhoneNumber(QString phoneNumber);
     static QString formatEmailAddress(QString emailAddress);
-}
+};
 
 #endif // STRINGFORMATTERS_H

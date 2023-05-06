@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     motorbike.cpp \
     person.cpp \
+    stringformatters.cpp \
     technician.cpp \
     truck.cpp \
     vehicle.cpp
@@ -35,6 +36,7 @@ HEADERS += \
     individual.h \
     motorbike.h \
     person.h \
+    stringformatters.h \
     technician.h \
     truck.h \
     vehicle.h

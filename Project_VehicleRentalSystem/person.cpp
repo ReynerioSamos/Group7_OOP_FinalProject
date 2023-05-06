@@ -1,4 +1,5 @@
 #include "person.h"
+#include <QDate>
 
 Person::Person(QObject *parent)
     : QObject{parent}
@@ -11,7 +12,7 @@ Person::Person(int pid) : Person()
     PersonID = pid;
     firstName = "";
     lastName = "";
-    DoB = NULL;
+    DoB = QDate;
     phoneNumber = "";
     email = "";
 
