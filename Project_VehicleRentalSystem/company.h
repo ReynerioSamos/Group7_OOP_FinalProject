@@ -10,10 +10,13 @@ public:
     explicit Company(QObject *parent = nullptr);
 
     //Contructors
-
+    Company(int compid);
+    Company(int compid, QString compname);
+    Company(int compid, QString compname, QDate datefound);
+    ~Company();
 
     //set functions
-    void  setCompanyID(int comp);
+    void  setCompanyID(int compid);
     void  setCompanyName(QString compname);
     void  setDateFounded(QDate datefound);
 
@@ -24,7 +27,7 @@ public:
 
 private:
     int companyID;
-    QString CompanyName;
+    QString companyName;
     QDate dateFounded;
 
 };

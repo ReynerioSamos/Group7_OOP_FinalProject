@@ -10,6 +10,10 @@ public:
     explicit individual(QObject *parent = nullptr);
 
     //Constructors
+    individual(int indid);
+    individual(int indid, QString fname, QString lname);
+    individual(int indid, QString fname, QString lname, QDate birthd);
+    ~individual();
 
     //set functions
     void setIndividualID(int indID);

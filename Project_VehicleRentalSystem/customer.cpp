@@ -3,15 +3,12 @@
 Customer::Customer(QObject *parent)
     : QObject{parent}
 {
-    Customer ID =   NULL;
-    phoneNumber =   NULL;
-    email =         NULL;
-    date_added =    NULL;
+
 }
 
 Customer::Customer()
 {
-    Customer ID =   0;
+    customerID =   0;
     phoneNumber =   "";
     email =         "";
     // sets the default date as when the object was created based on system date
@@ -20,7 +17,7 @@ Customer::Customer()
 
 Customer::Customer(int custid)
 {
-    CustomerID =    custid;
+    customerID =    custid;
     phoneNumber =   "";
     email =         "";
     date_added = QDate currentDate();
@@ -28,7 +25,7 @@ Customer::Customer(int custid)
 
 Customer::Customer(int custid, QDate added)
 {
-    CustomerID = custid;
+    customerID = custid;
     phoneNumber = "";
     email = "";
     date_added = added;
@@ -36,7 +33,7 @@ Customer::Customer(int custid, QDate added)
 
 Customer::Customer(int custid, QString phonenum, QString emailadd, QDate added)
 {
-    CustomerID = custid;
+    customerID = custid;
     phoneNumber = phonenum;
     email = emailadd;
     date_added = added;
@@ -44,12 +41,13 @@ Customer::Customer(int custid, QString phonenum, QString emailadd, QDate added)
 
 Customer::~Customer()
 {
-
+    // ensures that the data allocated is released upon destruction
+    delete[] customerID, phoneNumber, email, date_added;
 }
 
 void Customer::setCustomerID(int custid)
 {
-    CustomerID = custid;
+    customerID = custid;
 }
 
 void Customer::setPhoneNumber(QString phonenum)
@@ -69,7 +67,7 @@ void Customer::setDate_added(QDate added)
 
 int Customer::getCustomerID()
 {
-    return CustomerID;
+    return customerID;
 }
 
 QString Customer::getPhoneNumber()

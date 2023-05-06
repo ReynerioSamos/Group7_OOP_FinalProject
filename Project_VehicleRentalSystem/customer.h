@@ -31,7 +31,7 @@ public:
     QDate getDate_added();
 
 private:
-    int CustomerID;
+    int customerID;
     QString phoneNumber;
     QString email;
     QDate date_added;
