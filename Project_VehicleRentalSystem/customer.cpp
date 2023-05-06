@@ -1,4 +1,5 @@
 #include "customer.h"
+#include "stringformatters.h"
 
 Customer::Customer(QObject *parent)
     : QObject{parent}
@@ -34,8 +35,10 @@ Customer::Customer(int custid, QDate added)
 Customer::Customer(int custid, QString phonenum, QString emailadd, QDate added)
 {
     customerID = custid;
-    phoneNumber = phonenum;
-    email = emailadd;
+    QString formattedPhoneNumber = stringformatters::formatPhoneNumber(phonenum);
+    this->phoneNumber = formattedPhoneNumber;
+    QString formattedEmail = stringformatters::formatEmailAddress(emailadd);
+    this->email = formattedEmail;
     date_added = added;
 }
 
@@ -52,12 +55,14 @@ void Customer::setCustomerID(int custid)
 
 void Customer::setPhoneNumber(QString phonenum)
 {
-    phoneNumber = phonenum;
+    QString formattedPhoneNumber = stringformatters::formatPhoneNumber(phonenum);
+    this->phoneNumber = formattedPhoneNumber;
 }
 
 void Customer::setEmail(QString emailadd)
 {
-    email = emailadd;
+    QString formattedEmail = stringformatters::formatEmailAddress(emailadd);
+    this->email = formattedEmail;
 }
 
 void Customer::setDate_added(QDate added)

@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QDate>
 #include <QString>
+#include "stringformatters.h"
 
 class Person : public QObject
 {
@@ -11,7 +12,9 @@ public:
     explicit Person(QObject *parent = nullptr);
 
     //Constructors
-
+    Person(int pid);
+    Person(int pid, QString fname, QString lname, QDate dob, QString phonenum, email);
+    ~Person();
 
     //set functions
     void setPersonID(int persid);
@@ -29,13 +32,11 @@ public:
     QString getPhoneNum();
     QString getEmail();
 
-
-
 private:
     int PersonID;
     QString firstName, lastName;
     QDate DoB;
-    QString phoneNum;
+    QString phoneNumber;
     QString email;
 
 

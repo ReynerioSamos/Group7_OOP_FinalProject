@@ -10,13 +10,16 @@ public:
     explicit Employee(QObject *parent = nullptr);
 
     //Constructors
+    Employee(int empit);
+    Employee(int empid, int postid, QString pos, double sal, QDate dateemp);
+    ~Employee();
 
     //set functions
     void setEmployeeID(int empid);
-    void setPositionID(int postn);
+    void setPositionID(int postid);
     void setPosition(QString pos);
     void setSalary(double sal);
-    void setDateEmployed(QDate datemp);
+    void setDateEmployed(QDate dateemp);
 
     //get functions
     int getEmployeeID();

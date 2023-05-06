@@ -2,6 +2,7 @@
 #define COMPANY_H
 
 #include "customer.h"
+#include "stringformatters.h"
 #include <QObject>
 
 class Company : public Customer

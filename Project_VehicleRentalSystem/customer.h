@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QDate>
+#include "stringformatters.h"
 
 class Customer : public QObject
 {
