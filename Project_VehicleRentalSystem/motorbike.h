@@ -3,6 +3,7 @@
 
 #include "vehicle.h"
 #include <QObject>
+#include <QString>
 
 class Motorbike : public Vehicle
 {

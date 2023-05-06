@@ -2,6 +2,7 @@
 #define STRINGFORMATTERS_H
 
 #include <QString>
+#include <QRegularExpression>
 
 class stringformatters{
 public:

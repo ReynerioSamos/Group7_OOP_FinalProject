@@ -3,6 +3,8 @@
 
 #include "person.h"
 #include <QObject>
+#include <QString>
+#include <QDate>
 
 class Driver : public Person
 {

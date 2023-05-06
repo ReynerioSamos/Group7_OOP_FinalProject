@@ -1,7 +1,8 @@
-#ifndef UI_LOGINWINDOW_H
-#define UI_LOGINWINDOW_H
+#ifndef LOGINWINDOW_H
+#define LOGINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
@@ -18,4 +19,4 @@ public:
 private:
     Ui::LoginWindow *ui;
 };
-#endif // UI_LOGINWINDOW_H
+#endif // LOGINWINDOW_H

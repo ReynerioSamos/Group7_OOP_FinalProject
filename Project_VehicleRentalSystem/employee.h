@@ -3,6 +3,8 @@
 
 #include "person.h"
 #include <QObject>
+#include <QString>
+#include <QDate>
 
 class Employee : public Person
 {
@@ -11,7 +13,6 @@ public:
 
     //Constructors
     Employee(int empit);
-    Employee(int empid, int postid, QString pos, double sal, QDate dateemp);
     ~Employee();
 
     //set functions

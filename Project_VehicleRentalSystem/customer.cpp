@@ -1,13 +1,11 @@
 #include "customer.h"
 #include "stringformatters.h"
 
+#include <QDate>
+#include <QString>
+
 Customer::Customer(QObject *parent)
     : QObject{parent}
-{
-
-}
-
-Customer::Customer()
 {
     customerID =   0;
     phoneNumber =   "";
@@ -21,37 +19,12 @@ Customer::Customer(int custid)
     customerID =    custid;
     phoneNumber =   "";
     email =         "";
-    date_added = QDate currentDate();
+    date_added = QDate::currentDate();
 }
 
-Customer::Customer(int custid, QDate added)
-{
-    customerID = custid;
-    phoneNumber = "";
-    email = "";
-    date_added = added;
-}
+Customer::~Customer() {}
 
-Customer::Customer(int custid, QString phonenum, QString emailadd, QDate added)
-{
-    customerID = custid;
-    QString formattedPhoneNumber = stringformatters::formatPhoneNumber(phonenum);
-    this->phoneNumber = formattedPhoneNumber;
-    QString formattedEmail = stringformatters::formatEmailAddress(emailadd);
-    this->email = formattedEmail;
-    date_added = added;
-}
-
-Customer::~Customer()
-{
-    // ensures that the data allocated is released upon destruction
-    delete[] customerID, phoneNumber, email, date_added;
-}
-
-void Customer::setCustomerID(int custid)
-{
-    customerID = custid;
-}
+void Customer::setCustomerID(int custid) {customerID = custid;}
 
 void Customer::setPhoneNumber(QString phonenum)
 {
@@ -61,31 +34,16 @@ void Customer::setPhoneNumber(QString phonenum)
 
 void Customer::setEmail(QString emailadd)
 {
-    QString formattedEmail = stringformatters::formatEmailAddress(emailadd);
+   QString formattedEmail = stringformatters::formatEmailAddress(emailadd);
     this->email = formattedEmail;
 }
 
-void Customer::setDate_added(QDate added)
-{
-    date_added = added;
-}
+void Customer::setDate_added(QDate added) { date_added = added; }
 
-int Customer::getCustomerID()
-{
-    return customerID;
-}
+int Customer::getCustomerID() { return customerID; }
 
-QString Customer::getPhoneNumber()
-{
-    return phoneNumber;
-}
+QString Customer::getCustomerPhoneNumber() { return phoneNumber; }
 
-QString Customer::getEmail()
-{
-    return email;
-}
+QString Customer::getEmail() { return email; }
 
-QDate Customer::getDate_added()
-{
-    return date_added;
-}
+QDate Customer::getDate_added() { return date_added; }

@@ -1,10 +1,12 @@
 #ifndef PERSON_H
 #define PERSON_H
 
+#include "stringformatters.h"
+
 #include <QObject>
 #include <QDate>
 #include <QString>
-#include "stringformatters.h"
+
 
 class Person : public QObject
 {
@@ -13,7 +15,6 @@ public:
 
     //Constructors
     Person(int pid);
-    Person(int pid, QString fname, QString lname, QDate dob, QString phonenum, email);
     ~Person();
 
     //set functions

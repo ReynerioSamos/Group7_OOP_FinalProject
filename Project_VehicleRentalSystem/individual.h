@@ -3,6 +3,8 @@
 
 #include "customer.h"
 #include <QObject>
+#include <QString>
+#include <QDate>
 
 class individual : public Customer
 {
@@ -11,8 +13,6 @@ public:
 
     //Constructors
     individual(int indid);
-    individual(int indid, QString fname, QString lname);
-    individual(int indid, QString fname, QString lname, QDate birthd);
     ~individual();
 
     //set functions

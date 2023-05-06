@@ -3,6 +3,8 @@
 
 #include "vehicle.h"
 #include <QObject>
+#include <QString>
+#include <QDate>
 
 class Truck : public Vehicle
 {
@@ -18,7 +20,7 @@ public:
     void setHitchAvailable (bool status);
     void setHitchTypeID (int hitchtypeid);
     void setHitchType (QString hitchtype);
-    void setTorque (double torq);
+    void setTorque (int torq);
     void setMaxLoad (int max);
     void setMPG(int miles);
 
@@ -29,7 +31,7 @@ public:
     bool getHitchAvailable();
     int getHitchTypeID();
     QString getHitchType();
-    double getTorque();
+    int getTorque();
     int getMaxLoad();
     int getMPG();
 
@@ -40,7 +42,7 @@ private:
     bool hitchAvailable;
     int hitchTypeID;
     QString hitchType;
-    double torque;
+    int torque;
     int maxLoad;
     int mpg;
 

@@ -3,6 +3,7 @@
 
 #include "person.h"
 #include <QObject>
+#include <QString>
 
 class Technician : public Person
 {

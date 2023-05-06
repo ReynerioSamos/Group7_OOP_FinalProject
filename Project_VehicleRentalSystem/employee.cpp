@@ -3,68 +3,38 @@
 Employee::Employee(QObject *parent)
     : Person{parent}
 {
-    employeeID = NULL;
-    PositionID = NULL;
+    employeeID = 0;
+    PositionID = 0;
     Position =  "";
-    salary = NULL;
-    DateEmployed = NULL;
+    salary = 0;
+    DateEmployed = QDate::currentDate();
 }
 
 Employee::Employee(int empid)
 {
     employeeID = empid;
-    PositionID = NULL;
+    PositionID = 0;
     Position =  "";
-    salary = NULL;
-    DateEmployed = NULL;
+    salary = 0;
+    DateEmployed = QDate::currentDate();
 }
 
-Employee::Employee(int empid, int postid, QString pos, double sal, QDate dateemp)
-{
-    employeeID = empid;
-    PositionID = postid;
-    Position = pos;
-    salary = sal;
-    DateEmployed = dateemp;
-}
+void Employee::setEmployeeID(int empid) {employeeID = empid; }
 
+void Employee::setPositionID(int postid) {PositionID = postid; }
 
-void Employee::setEmployeeID(int empid) {
-    employeeID = empid;
-}
+void Employee::setPosition(QString pos) { Position = pos; }
 
-void Employee::setPositionID(int postid) {
-    PositionID = postid;
-}
+void Employee::setSalary(double sal) { salary = sal; }
 
-void Employee::setPosition(QString pos) {
-    Position = pos;
-}
+void Employee::setDateEmployed(QDate dateemp) { DateEmployed = dateemp; }
 
-void Employee::setSalary(double sal) {
-    salary = sal;
-}
+int Employee::getEmployeeID() { return employeeID; }
 
-void Employee::setDateEmployed(QDate dateemp) {
-    DateEmployed = dateemp;
-}
+int Employee::getPositionID() { return PositionID; }
 
-int Employee::getEmployeeID() {
-    return employeeID;
-}
+QString Employee::getPosition() { return Position; }
 
-int Employee::getPositionID() {
-    return PositionID;
-}
+double Employee::getSalary() { return salary; }
 
-QString Employee::getPosition() {
-    return Position;
-}
-
-double Employee::getSalary() {
-    return salary;
-}
-
-QDate Employee::getDateEmployed() {
-    return DateEmployed;
-}
+QDate Employee::getDateEmployed() { return DateEmployed; }

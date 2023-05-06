@@ -1,5 +1,5 @@
-#include "UI_loginwindow.h"
-#include "ui_loginwindow.h"
+#include "loginwindow.h"
+#include "loginwindow.h"
 
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,4 +12,3 @@ LoginWindow::~LoginWindow()
 {
     delete ui;
 }
-

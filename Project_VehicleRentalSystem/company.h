@@ -2,8 +2,9 @@
 #define COMPANY_H
 
 #include "customer.h"
-#include "stringformatters.h"
 #include <QObject>
+#include <QString>
+#include <QDate>
 
 class Company : public Customer
 {
@@ -12,8 +13,6 @@ public:
 
     //Contructors
     Company(int compid);
-    Company(int compid, QString compname);
-    Company(int compid, QString compname, QDate datefound);
     ~Company();
 
     //set functions

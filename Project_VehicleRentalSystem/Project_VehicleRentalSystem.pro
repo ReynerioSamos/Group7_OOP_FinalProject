@@ -9,7 +9,6 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    UI_loginwindow.cpp \
     bus.cpp \
     car.cpp \
     company.cpp \
@@ -17,6 +16,7 @@ SOURCES += \
     driver.cpp \
     employee.cpp \
     individual.cpp \
+    loginwindow.cpp \
     main.cpp \
     motorbike.cpp \
     person.cpp \
@@ -26,7 +26,6 @@ SOURCES += \
     vehicle.cpp
 
 HEADERS += \
-    UI_loginwindow.h \
     bus.h \
     car.h \
     company.h \
@@ -34,6 +33,7 @@ HEADERS += \
     driver.h \
     employee.h \
     individual.h \
+    loginwindow.h \
     motorbike.h \
     person.h \
     stringformatters.h \
@@ -42,7 +42,7 @@ HEADERS += \
     vehicle.h
 
 FORMS += \
-    UI_loginwindow.ui
+    loginwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

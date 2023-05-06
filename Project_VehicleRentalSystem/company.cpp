@@ -3,9 +3,9 @@
 Company::Company(QObject *parent)
     : Customer{parent}
 {
-    companyID =     NULL;
-    CompanyName =   NULL;
-    dateFounded=    NULL;
+    companyID   =    0;
+    companyName =    "";
+    dateFounded =    QDate::currentDate();
 
 }
 
@@ -14,28 +14,10 @@ Company::Company(int compid)
     companyID =     compid;
 }
 
-Company::Company(int compid, QString compname)
-{
-    companyID =     compid;
-    companyName =   compname;
-}
 
-Company::Company(int compid, QString compname, QDate datefound)
-{
-    companyID =     compid;
-    companyName =   compname;
-    dateFounded =   datefound;
-}
+Company::~Company() {}
 
-Company::~Company()
-{
-    delete[] companyID, companyName, dateFounded;
-}
-
-void Company::setCompanyID(int compid)
-{
-    companyID = compid;
-}
+void Company::setCompanyID(int compid){ companyID = compid; }
 
 void Company::setCompanyName(QString compname)
 {
