@@ -306,6 +306,7 @@ CREATE TABLE IF NOT EXISTS RepairRequests (
 
 CREATE TABLE IF NOT EXISTS MaintenanceRequest (
 
+
 );
 
 

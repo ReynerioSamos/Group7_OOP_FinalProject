@@ -12,3 +12,4 @@ LoginWindow::~LoginWindow()
 {
     delete ui;
 }
+
