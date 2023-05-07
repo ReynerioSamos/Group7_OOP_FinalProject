@@ -289,6 +289,23 @@ CREATE TABLE IF NOT EXISTS Motorbikes (
 
 );
 
+
 -- Tables use to process records and transaction like rental requests, driver requests, repair requests, maintenance request, etc.
+
+CREATE TABLE IF NOT EXISTS VehicleRentalRequests (
+
+);
+
+CREATE TABLE IF NOT EXISTS DriverRequests (
+
+);
+
+CREATE TABLE IF NOT EXISTS RepairRequests (
+
+);
+
+CREATE TABLE IF NOT EXISTS MaintenanceRequest (
+
+);
 
 
