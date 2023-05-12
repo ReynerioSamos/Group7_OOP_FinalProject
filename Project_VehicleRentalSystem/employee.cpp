@@ -19,22 +19,32 @@ Employee::Employee(int empid)
     DateEmployed = QDate::currentDate();
 }
 
-void Employee::setEmployeeID(int empid) {employeeID = empid; }
+void Employee::setEmployeeID(int empid)
+{employeeID = empid; }
 
-void Employee::setPositionID(int postid) {PositionID = postid; }
+void Employee::setPositionID(int postid)
+{PositionID = postid; }
 
-void Employee::setPosition(QString pos) { Position = pos; }
+void Employee::setPosition(QString pos)
+{ Position = pos; }
 
-void Employee::setSalary(double sal) { salary = sal; }
+void Employee::setSalary(double sal)
+{ salary = sal; }
 
-void Employee::setDateEmployed(QDate dateemp) { DateEmployed = dateemp; }
+void Employee::setDateEmployed(QDate dateemp)
+{ DateEmployed = dateemp; }
 
-int Employee::getEmployeeID() { return employeeID; }
+int Employee::getEmployeeID()
+{ return employeeID; }
 
-int Employee::getPositionID() { return PositionID; }
+int Employee::getPositionID()
+{ return PositionID; }
 
-QString Employee::getPosition() { return Position; }
+QString Employee::getPosition()
+{ return Position; }
 
-double Employee::getSalary() { return salary; }
+double Employee::getSalary()
+{ return salary; }
 
-QDate Employee::getDateEmployed() { return DateEmployed; }
+QDate Employee::getDateEmployed()
+{ return DateEmployed; }

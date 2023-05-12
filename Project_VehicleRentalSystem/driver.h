@@ -12,6 +12,8 @@ public:
     explicit Driver(QObject *parent = nullptr);
 
     //Constructors
+    Driver(int driverid);
+    ~Driver();
 
     //set functions
     void setDriverID(int driverid);

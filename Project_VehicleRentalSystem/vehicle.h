@@ -12,6 +12,8 @@ public:
     explicit Vehicle(QObject *parent = nullptr);
 
     //Constructor
+    Vehicle(int vehicleid);
+    ~Vehicle();
 
     //set functions
     void setVehicleID(int vehicleid);
@@ -20,7 +22,7 @@ public:
     void setModel(QString model);
     void setYear (int x);
     void setDesc (QString desc);
-    void setNumOfPassengers(int passengers);
+    void setnum_of_passengers(int passengers);
     void setTransmissionID(int transid);
     void setTransmission (QString trans);
     void setFuelTypeID(int fuelid);
@@ -32,20 +34,20 @@ public:
 
     //get Functions
     int getVehicleID();
-    int getTotalMiles;
+    int getTotalMiles();
     QString getMake();
     QString getModel();
     int getYear();
     QString getDescription();
-    int getNumOfPassengers();
+    int getnum_of_passengers();
     int getTransmissionID();
     int getFuelTypeID();
     int getDrivetrainID();
     QString getTransmission();
     QString getFuelType();
-    QString getDrivetrain;
-    bool getAvailability;
-    QDate getLastServiced;
+    QString getDrivetrain();
+    bool getAvailability();
+    QDate getLastServiced();
 
 private:
     int vehicleID;

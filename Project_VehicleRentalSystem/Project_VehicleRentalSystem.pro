@@ -13,6 +13,7 @@ SOURCES += \
     car.cpp \
     company.cpp \
     customer.cpp \
+    database.cpp \
     driver.cpp \
     employee.cpp \
     individual.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     car.h \
     company.h \
     customer.h \
+    database.h \
     driver.h \
     employee.h \
     individual.h \

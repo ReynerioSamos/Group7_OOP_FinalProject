@@ -22,7 +22,6 @@ Customer::Customer(int custid)
     date_added = QDate::currentDate();
 }
 
-Customer::~Customer() {}
 
 void Customer::setCustomerID(int custid) {customerID = custid;}
 
@@ -35,15 +34,20 @@ void Customer::setPhoneNumber(QString phonenum)
 void Customer::setEmail(QString emailadd)
 {
    QString formattedEmail = stringformatters::formatEmailAddress(emailadd);
-    this->email = formattedEmail;
+   this->email = formattedEmail;
 }
 
-void Customer::setDate_added(QDate added) { date_added = added; }
+void Customer::setDate_added(QDate added)
+{ date_added = added; }
 
-int Customer::getCustomerID() { return customerID; }
+int Customer::getCustomerID()
+{ return customerID; }
 
-QString Customer::getCustomerPhoneNumber() { return phoneNumber; }
+QString Customer::getCustomerPhoneNumber()
+{ return phoneNumber; }
 
-QString Customer::getEmail() { return email; }
+QString Customer::getEmail()
+{ return email; }
 
-QDate Customer::getDate_added() { return date_added; }
+QDate Customer::getDate_added()
+{ return date_added; }

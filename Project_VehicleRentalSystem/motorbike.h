@@ -11,6 +11,8 @@ public:
     explicit Motorbike(QObject *parent = nullptr);
 
     //constructor
+    Motorbike(int bikeid);
+    ~Motorbike();
 
     //set functions
     void setBikeID(int bikeid);

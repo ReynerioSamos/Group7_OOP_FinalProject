@@ -12,34 +12,24 @@ Company::Company(QObject *parent)
 Company::Company(int compid)
 {
     companyID =     compid;
+    companyName = "";
+    dateFounded = QDate::currentDate();
 }
 
-
-Company::~Company() {}
-
-void Company::setCompanyID(int compid){ companyID = compid; }
+void Company::setCompanyID(int compid)
+{ companyID = compid; }
 
 void Company::setCompanyName(QString compname)
-{
-    companyName = compname;
-}
+{ companyName = compname; }
 
 void Company::setDateFounded(QDate datefound)
-{
-    dateFounded = datefound;
-}
+{ dateFounded = datefound; }
 
 int Company::getCompanyID()
-{
-    return companyID;
-}
+{ return companyID; }
 
 QString Company::getCompanyName()
-{
-    return companyName;
-}
+{ return companyName; }
 
 QDate Company::getDateFounded()
-{
-    return dateFounded;
-}
+{ return dateFounded; }

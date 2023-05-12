@@ -10,6 +10,8 @@ public:
     explicit Car(QObject *parent = nullptr);
 
     //constructos
+    Car(int carid);
+    ~Car();
 
     //set functions
     void setCarID (int carid);

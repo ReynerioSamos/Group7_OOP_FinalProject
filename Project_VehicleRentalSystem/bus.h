@@ -10,6 +10,8 @@ public:
     explicit Bus(QObject *parent = nullptr);
 
     //constructors
+    Bus(int busid);
+    ~Bus();
 
     //set functions
     void setBusID(int busid);
@@ -28,7 +30,7 @@ public:
     bool getAC();
     int getBusTypeID();
     QString getBusType();
-    int getMPG;
+    int getMPG();
     int getLength();
     int getWidth();
     int getHeight();

@@ -11,6 +11,8 @@ public:
     explicit Technician(QObject *parent = nullptr);
 
     //constructors
+    Technician(int techid);
+    ~Technician();
 
     //set functions
     void setTechnicianID(int techid);

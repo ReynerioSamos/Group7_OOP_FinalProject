@@ -12,6 +12,8 @@ public:
     explicit Truck(QObject *parent = nullptr);
 
     //constructors
+    Truck(int truckid);
+    ~Truck();
 
     //set functions
     void setTruckID (int truckid);
