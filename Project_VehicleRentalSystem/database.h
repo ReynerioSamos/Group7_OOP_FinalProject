@@ -88,6 +88,8 @@ public:
     bool deleteBus (int busobjID);
     bool deleteMotorbike (int bikeID);
 
+    //Records/Requests tables related queries
+
 private:
     QSqlDatabase db;
 

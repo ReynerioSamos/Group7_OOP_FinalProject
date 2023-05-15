@@ -40,6 +40,7 @@ void Database::closeDatabase()
     qDebug() << "Disconnected from database";
 }
 
+//begining of customer related insert queries
 bool Database::insertCustomer(Customer& cust){
 
     QSqlQuery query(db);
@@ -107,7 +108,7 @@ bool Database::insertIndividual(individual& indiv, int custID)
 
 }
 
-
+// begining of person related insert queries
 bool Database::insertPerson (Person& pers)
 {
     QSqlQuery query(db);
@@ -154,4 +155,56 @@ bool Database::insertEmployee (Employee& emp, int persID, QString user, QString 
     return true;
 }
 
+// begining of vehicle-related queries
+bool Database::insertVehicle (Vehicle& vehicleobj)
+{
+    QSqlQuery query(db);
+
+    query.prepare("INSERT INTO vehicles (totalMiles, make, model, yearMade, descr, numOfPassengers, TransmissionTypeID, FuelTypeID, DriveTypeID, available, lastServiced) "
+                  "VALUES (:totalMiles, :make, :model, :yearMade, :descr, :numOfPassengers, :TransmissionTypeID, :FuelTypeID, :DrivetrainTypeID, :available, :lastServiced);");
+
+    query.bindValue(":totalMiles", vehicleobj.getTotalMiles());
+    query.bindValue(":make", vehicleobj.getMake());
+    query.bindValue(":model", vehicleobj.getModel());
+    query.bindValue(":yearMade", vehicleobj.getModel());
+    query.bindValue(":descr", vehicleobj.getDescription());
+    query.bindValue(":numOfPassengers", vehicleobj.getnum_of_passengers());
+    query.bindValue(":TransmissionTypeID", vehicleobj.getTransmissionID());
+    query.bindValue(":FuelTypeID", vehicleobj.getFuelTypeID());
+    query.bindValue(":DrivetrainTypeID", vehicleobj.getDrivetrainID());
+    query.bindValue(":available", vehicleobj.getAvailability());
+    query.bindValue(":lastServiced", vehicleobj.getLastServiced());
+
+
+    if(!query.exec()){
+        qDebug() << "Failed to insert Vehicle: " << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Vehicle inserted successfully";
+    return true;
+}
+
+bool Database::insertCar(Car& carobj, int vehicleID)
+{
+    QSqlQuery query(db);
+
+    query.prepare("INSERT INTO cars (VehicleID, mpg_or_kwh, RoadTypeID) "
+                  "VALUES (:VehicleID, :mpg_or_kwh, :RoadTypeID);");
+
+    query.bindValue(":VehicleID", vehicleID);
+    query.bindValue(":mpg_or_kwh", carobj.getMPGorKWH());
+    query.bindValue(":RoadTypeID", carobj.getRoadType());
+
+    if(!query.exec()){
+        qDebug() << "Failed to insert Car: " << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Car inserted successfully";
+    return true;
+ }
+
+
+//begining of record related table insert queries (think requests)
 

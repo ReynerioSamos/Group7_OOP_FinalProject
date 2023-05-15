@@ -17,18 +17,22 @@ SOURCES += \
     customer.cpp \
     database.cpp \
     driver.cpp \
+    driverrequest.cpp \
     employee.cpp \
     individual.cpp \
     main.cpp \
     maintenance.cpp \
+    maintenancerequest.cpp \
     mainwindow.cpp \
     manager.cpp \
     motorbike.cpp \
     person.cpp \
+    repairrequest.cpp \
     stringformatters.cpp \
     technician.cpp \
     truck.cpp \
-    vehicle.cpp
+    vehicle.cpp \
+    vehiclerentalrequest.cpp
 
 HEADERS += \
     admin.h \
@@ -39,17 +43,21 @@ HEADERS += \
     customer.h \
     database.h \
     driver.h \
+    driverrequest.h \
     employee.h \
     individual.h \
     maintenance.h \
+    maintenancerequest.h \
     mainwindow.h \
     manager.h \
     motorbike.h \
     person.h \
+    repairrequest.h \
     stringformatters.h \
     technician.h \
     truck.h \
-    vehicle.h
+    vehicle.h \
+    vehiclerentalrequest.h
 
 FORMS += \
     admin.ui \
