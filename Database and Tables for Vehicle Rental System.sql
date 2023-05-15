@@ -2,7 +2,7 @@
 -- Group Memebers
 -- Reynerio Samos, Julius Shol, Martin Uyi, Kelvin Gordon
 
---reference tables
+-- reference tables
 /*
 TransmissionsTypes
 FuelTypes
@@ -16,7 +16,7 @@ LicenseClasses
 Positions
 */
 
---object class tables
+-- object class tables
 /*
 Customer<base>
     ID, phonenumber, email, date_added
@@ -292,20 +292,84 @@ CREATE TABLE IF NOT EXISTS Motorbikes (
 
 -- Tables use to process records and transaction like rental requests, driver requests, repair requests, maintenance request, etc.
 
-CREATE TABLE IF NOT EXISTS VehicleRentalRequests (
+CREATE TABLE IF NOT EXISTS DriverRequests (
+    ID int NOT NULL auto_increment,
+    DriverID int NOT NULL,
+    EmployeeID int NOT NULL,
+    dateRequested date NOT NULL,
+    dateStart date,
+    dateEnd date,
+    driversFee numeric(8,2),
+    notes varchar (200),
 
+    CONSTRAINT DriverRequestID_PK primary key(ID),
+    CONSTRAINT DriverID_FK foreign key(DriverID) REFERENCES Drivers(ID),
+    CONSTRAINT EmployeeID_FK foreign key(EmployeeID) REFERENCES Employees(ID)
 );
 
-CREATE TABLE IF NOT EXISTS DriverRequests (
+CREATE TABLE IF NOT EXISTS VehicleRentalRequests (
+    ID int NOT NULL auto_increment,
+    CustomerID int NOT NULL,
+    customerType ENUM ('Company', 'Individual') NOT NULL,
+    VehicleID int NOT NULL,
+    vehicleType ENUM ('Car','Truck','Bus','Motorbike') NOT NULL,
+    EmployeeID int NOT NULL,
+    dateRequested date NOT NULL,
+    driverRequested TINYINT(1) NOT NULL,
+    DriverRequestID int,
+    daysRentPeriod int NOT NULL,
+    dailyRate numeric(8,2) NOT NULL,
+    totalCost numeric(8,2) NOT NULL,
+    paymentStatus TINYINT(1) NOT NULL,
+    dateStart date,
+    dateend date,
+    approvalStatus TINYINT(1) NOT NULL,
+
+    CONSTRAINT VehicleRentalRequestID_PK primary key(ID),
+    CONSTRAINT CustomerID_FK foreign key(CustomerID) REFERENCES Customers(ID),
+    CONSTRAINT VehicleID_FK foreign key(VehicleID) REFERENCES Vehicles(ID),
+    CONSTRAINT EmployeeID_FK foreign key(EmployeeID) REFERENCES Employees(ID),
+    CONSTRAINT DriverRequestID_FK foreign key(DriverRequestID) REFERENCES DriverRequests(ID)
 
 );
 
 CREATE TABLE IF NOT EXISTS RepairRequests (
-
+    ID int NOT NULL auto_increment,
+    VehicleID int NOT NULL,
+    VehicleType ENUM ('Car', 'Truck', 'Bus', 'Motorbike') NOT NULL,
+    TechnicianID int NOT NULL,
+    EmployeeID int NOT NULL,
+    dateRequested date NOT NULL,
+    repairFee numeric(8,2),
+    approvalStatus tinyint(1) NOT NULL,
+    ManagerID int,
+    approvalDate date,
+    notes varchar(200),
+    
+    CONSTRAINT RepairRequestID_PK primary key(ID),
+    CONSTRAINT VehicleID_FK foreign key(VehicleID) REFERENCES Vehicles(ID),
+    CONSTRAINT TechnicianID_FK foreign key(TechnicianID) REFERENCES Technicians(ID),
+    CONSTRAINT EmployeeID_FK foreign key(EmployeeID) REFERENCES Employees(ID),
+    CONSTRAINT ManagerId_FK foreign key(ManagerID) REFERENCES Employees(ID)
+  
 );
 
-CREATE TABLE IF NOT EXISTS MaintenanceRequest (
+CREATE TABLE IF NOT EXISTS MaintenanceRequests (
+    ID int NOT NULL auto_increment,
+    VehicleID int NOT NULL,
+    VehicleType ENUM ('Car', 'Truck', 'Bus', 'Motorbike') NOT NULL,
+    EmployeeID int NOT NULL,
+    dateRequested date NOT NULL,
+    approvalStatus tinyint(1) NOT NULL, 
+    MaintenanceID int,
+    approvalDate date,
+    notes varchar(200),
 
+
+    CONSTRAINT MaintenanceRequestID_PK primary key(ID),
+    CONSTRAINT VehicleID_FK foreign key(VehicleID) REFERENCES Vehicles(ID),
+    CONSTRAINT EmployeeID_FK foreign key(EmployeeID) REFERENCES Employees(ID),
+    CONSTRAINT MaintenanceID_FK foreign key(MaintenanceID) REFERENCES Employees(ID)
 
 );
 
