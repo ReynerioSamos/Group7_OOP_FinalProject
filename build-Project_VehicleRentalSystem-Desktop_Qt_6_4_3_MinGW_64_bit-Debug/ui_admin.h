@@ -11,8 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDateEdit>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -65,6 +69,23 @@ public:
     QWidget *page_6;
     QLabel *label_10;
     QPushButton *Create_User_Back;
+    QPushButton *closeButton;
+    QWidget *verticalLayoutWidget;
+    QGridLayout *gridLayout_4;
+    QLabel *label_27;
+    QLineEdit *lastNameLineEdit;
+    QLineEdit *firstNameLineEdit;
+    QLineEdit *salarylineEdit;
+    QLabel *label_29;
+    QLabel *label_31;
+    QComboBox *postioncombobox;
+    QLabel *label_28;
+    QLabel *label_26;
+    QLabel *label_30;
+    QLineEdit *positionID;
+    QDateEdit *dateEdit;
+    QPushButton *saveButton;
+    QLabel *label_5;
     QWidget *page_7;
     QLabel *label_11;
     QPushButton *Edit_User_Back;
@@ -83,7 +104,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         AdminMain = new QStackedWidget(centralwidget);
         AdminMain->setObjectName("AdminMain");
-        AdminMain->setGeometry(QRect(9, -1, 1491, 801));
+        AdminMain->setGeometry(QRect(0, -150, 1491, 801));
         DashBoard = new QWidget();
         DashBoard->setObjectName("DashBoard");
         label_2 = new QLabel(DashBoard);
@@ -216,6 +237,84 @@ public:
         Create_User_Back = new QPushButton(page_6);
         Create_User_Back->setObjectName("Create_User_Back");
         Create_User_Back->setGeometry(QRect(1380, 0, 83, 29));
+        closeButton = new QPushButton(page_6);
+        closeButton->setObjectName("closeButton");
+        closeButton->setGeometry(QRect(570, 600, 117, 29));
+        verticalLayoutWidget = new QWidget(page_6);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(290, 250, 491, 311));
+        gridLayout_4 = new QGridLayout(verticalLayoutWidget);
+        gridLayout_4->setObjectName("gridLayout_4");
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        label_27 = new QLabel(verticalLayoutWidget);
+        label_27->setObjectName("label_27");
+
+        gridLayout_4->addWidget(label_27, 1, 0, 1, 1);
+
+        lastNameLineEdit = new QLineEdit(verticalLayoutWidget);
+        lastNameLineEdit->setObjectName("lastNameLineEdit");
+
+        gridLayout_4->addWidget(lastNameLineEdit, 2, 1, 1, 2);
+
+        firstNameLineEdit = new QLineEdit(verticalLayoutWidget);
+        firstNameLineEdit->setObjectName("firstNameLineEdit");
+
+        gridLayout_4->addWidget(firstNameLineEdit, 1, 1, 1, 2);
+
+        salarylineEdit = new QLineEdit(verticalLayoutWidget);
+        salarylineEdit->setObjectName("salarylineEdit");
+
+        gridLayout_4->addWidget(salarylineEdit, 6, 1, 1, 2);
+
+        label_29 = new QLabel(verticalLayoutWidget);
+        label_29->setObjectName("label_29");
+
+        gridLayout_4->addWidget(label_29, 5, 0, 1, 1);
+
+        label_31 = new QLabel(verticalLayoutWidget);
+        label_31->setObjectName("label_31");
+
+        gridLayout_4->addWidget(label_31, 2, 0, 1, 1);
+
+        postioncombobox = new QComboBox(verticalLayoutWidget);
+        postioncombobox->addItem(QString());
+        postioncombobox->addItem(QString());
+        postioncombobox->addItem(QString());
+        postioncombobox->setObjectName("postioncombobox");
+
+        gridLayout_4->addWidget(postioncombobox, 5, 1, 1, 2);
+
+        label_28 = new QLabel(verticalLayoutWidget);
+        label_28->setObjectName("label_28");
+
+        gridLayout_4->addWidget(label_28, 4, 0, 1, 1);
+
+        label_26 = new QLabel(verticalLayoutWidget);
+        label_26->setObjectName("label_26");
+
+        gridLayout_4->addWidget(label_26, 6, 0, 1, 1);
+
+        label_30 = new QLabel(verticalLayoutWidget);
+        label_30->setObjectName("label_30");
+
+        gridLayout_4->addWidget(label_30, 3, 0, 1, 1);
+
+        positionID = new QLineEdit(verticalLayoutWidget);
+        positionID->setObjectName("positionID");
+
+        gridLayout_4->addWidget(positionID, 3, 1, 1, 2);
+
+        dateEdit = new QDateEdit(verticalLayoutWidget);
+        dateEdit->setObjectName("dateEdit");
+
+        gridLayout_4->addWidget(dateEdit, 4, 1, 1, 2);
+
+        saveButton = new QPushButton(page_6);
+        saveButton->setObjectName("saveButton");
+        saveButton->setGeometry(QRect(400, 600, 117, 29));
+        label_5 = new QLabel(page_6);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(460, 200, 101, 20));
         AdminMain->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName("page_7");
@@ -238,7 +337,7 @@ public:
         Admin->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Admin);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1514, 25));
+        menubar->setGeometry(QRect(0, 0, 1514, 26));
         Admin->setMenuBar(menubar);
         statusbar = new QStatusBar(Admin);
         statusbar->setObjectName("statusbar");
@@ -246,7 +345,7 @@ public:
 
         retranslateUi(Admin);
 
-        AdminMain->setCurrentIndex(0);
+        AdminMain->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(Admin);
@@ -285,6 +384,19 @@ public:
         Delete_Tables_Back_->setText(QCoreApplication::translate("Admin", "Back", nullptr));
         label_10->setText(QCoreApplication::translate("Admin", "Create User", nullptr));
         Create_User_Back->setText(QCoreApplication::translate("Admin", "Back", nullptr));
+        closeButton->setText(QCoreApplication::translate("Admin", "Close", nullptr));
+        label_27->setText(QCoreApplication::translate("Admin", "First Name", nullptr));
+        label_29->setText(QCoreApplication::translate("Admin", "Position:", nullptr));
+        label_31->setText(QCoreApplication::translate("Admin", "Last Name:", nullptr));
+        postioncombobox->setItemText(0, QCoreApplication::translate("Admin", "1", nullptr));
+        postioncombobox->setItemText(1, QCoreApplication::translate("Admin", "2", nullptr));
+        postioncombobox->setItemText(2, QCoreApplication::translate("Admin", "3", nullptr));
+
+        label_28->setText(QCoreApplication::translate("Admin", "Date Employed", nullptr));
+        label_26->setText(QCoreApplication::translate("Admin", "Salary:", nullptr));
+        label_30->setText(QCoreApplication::translate("Admin", "Position ID:", nullptr));
+        saveButton->setText(QCoreApplication::translate("Admin", "Save", nullptr));
+        label_5->setText(QCoreApplication::translate("Admin", "CREATE USER*", nullptr));
         label_11->setText(QCoreApplication::translate("Admin", "Edit User", nullptr));
         Edit_User_Back->setText(QCoreApplication::translate("Admin", "Back", nullptr));
         label_12->setText(QCoreApplication::translate("Admin", "Delete User", nullptr));

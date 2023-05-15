@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1505</width>
-    <height>919</height>
+    <width>1524</width>
+    <height>986</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,11 +20,16 @@
       <x>-1</x>
       <y>0</y>
       <width>1511</width>
-      <height>891</height>
+      <height>951</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="CLerkImg">
@@ -386,7 +391,7 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>10</x>
         <y>0</y>
         <width>121</width>
         <height>21</height>
@@ -414,6 +419,87 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>180</y>
+        <width>391</width>
+        <height>266</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="3" column="0">
+        <widget class="QPushButton" name="Create_Customer_Submit_2">
+         <property name="text">
+          <string>Submit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Phone Number</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Create_Customer_PhoneNum"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="Create_Customer_Email"/>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_18">
+               <property name="text">
+                <string>Date Added</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="Create_Customer_DateAdded"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="Create_Customer_Clear">
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_3">
      <widget class="QPushButton" name="UpdateCustomer_Back">
@@ -432,7 +518,7 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>10</x>
         <y>0</y>
         <width>131</width>
         <height>21</height>
@@ -447,12 +533,129 @@
        <string>Update Customer</string>
       </property>
      </widget>
+     <widget class="QTableView" name="UpdateUser_tableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>1471</width>
+        <height>331</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>490</y>
+        <width>391</width>
+        <height>266</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="3" column="0">
+        <widget class="QPushButton" name="Update_Customer_Submit">
+         <property name="text">
+          <string>Submit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>Phone Number</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Update_Customer_PhoneNum"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="Update_Customer_Email"/>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>Date Added</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="Update_Customer_DateAdded"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="Update_Customer_Clear">
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>451</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Customer ID to Edit current Customer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="UpdateCustomer_RefreshTable">
+      <property name="geometry">
+       <rect>
+        <x>1342</x>
+        <y>400</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Refresh Table </string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_4">
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>10</x>
         <y>0</y>
         <width>121</width>
         <height>21</height>
@@ -480,12 +683,89 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QTableView" name="DeleteCustomer_tableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>1461</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>451</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Customer ID to Delete current Customer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="DeleteCustomer_Delete_Button">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>710</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>620</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>User to be deleted </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>690</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>User ID</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Delete_Customer_UserID">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>710</y>
+        <width>113</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_5">
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>10</x>
         <y>0</y>
         <width>171</width>
         <height>21</height>
@@ -513,12 +793,137 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>381</width>
+        <height>617</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>Vehicle ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRepairRequest_VehicleID_ComboBox"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>Vehicle Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRepairRequest_VehicleType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>Technician ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRepairRequest_TechnicianID_ComboBox"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>Employee ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRepairRequest_EmployeeID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>Date Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateRepairRequest_DateRequested"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>Repair Fee</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRepairRequest_RepairFee"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>Approval Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRepairRequest_ApprovalStatus"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>Manager ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRepairRequest_ManagerID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>Approval Date</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateRepairRequest_ApprovalDate"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>Notes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRepairRequest_Notes"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="CreateRepairRequest_Submit">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>680</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_6">
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>10</x>
         <y>0</y>
         <width>171</width>
         <height>21</height>
@@ -546,12 +951,160 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>80</y>
+        <width>381</width>
+        <height>617</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_34">
+         <property name="text">
+          <string>Vehicle ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRepairRequest_VehicleID_ComboBox"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_35">
+         <property name="text">
+          <string>Vehicle Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRepairRequest_VehicleType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_36">
+         <property name="text">
+          <string>Technician ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRepairRequest_TechnicianID_ComboBox"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_37">
+         <property name="text">
+          <string>Employee ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRepairRequest_EmployeeID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_38">
+         <property name="text">
+          <string>Date Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateRepairRequest_DateRequested"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>Repair Fee</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRepairRequest_RepairFee"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>Approval Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRepairRequest_ApprovalStatus"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_41">
+         <property name="text">
+          <string>Manager ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRepairRequest_ManagerID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>Approval Date</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateRepairRequest_ApprovalDate"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>Notes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRepairRequest_Notes"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="UpdateRepairRequest_Submit">
+      <property name="geometry">
+       <rect>
+        <x>1330</x>
+        <y>700</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="UpdateRepairRequest_TableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>991</width>
+        <height>591</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_44">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>491</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Repair Request ID to Start Editing  current Request</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_7">
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>10</x>
         <y>0</y>
         <width>171</width>
         <height>21</height>
@@ -578,6 +1131,226 @@
       <property name="text">
        <string>Back</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>50</y>
+        <width>491</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_45">
+         <property name="text">
+          <string>Customer ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_CustomerID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_46">
+         <property name="text">
+          <string>Customer Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_CustomerType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_47">
+         <property name="text">
+          <string>Vehicle ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_VehicleID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_48">
+         <property name="text">
+          <string>Vehicle Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_VehicleType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_49">
+         <property name="text">
+          <string>Employee ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_EmpID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_51">
+         <property name="text">
+          <string>Driver Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRentalRequest_DriverRequested">
+         <item>
+          <property name="text">
+           <string>Yes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>No</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_52">
+         <property name="text">
+          <string>Driver Request ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_DriverRequestID"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="CreateRentalRequest_Submit">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>580</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>53</y>
+        <width>491</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_54">
+         <property name="text">
+          <string>Daily Rate</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_DailyRate"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_55">
+         <property name="text">
+          <string>Total Cost</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_TotalCost"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_56">
+         <property name="text">
+          <string>Payment Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRentalRequest_PaymentStatus">
+         <item>
+          <property name="text">
+           <string>Paid</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Not Paid</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_57">
+         <property name="text">
+          <string>Date Start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateRentalRequest_DateStart"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_50">
+         <property name="text">
+          <string>Date Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateRentalRequest_DateRequested"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_58">
+         <property name="text">
+          <string>Date End</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateRentalRequest_DateEnd"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_53">
+         <property name="text">
+          <string>Days To Be Rented</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateRentalRequest_DaysRentPeriod"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_59">
+         <property name="text">
+          <string>Approval Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateRentalRequest_ApprovalStatus">
+         <item>
+          <property name="text">
+           <string>Approved</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pending</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_8">
@@ -612,6 +1385,262 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QTableView" name="UpdateRentalRequest_tableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>1471</width>
+        <height>271</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>360</y>
+        <width>491</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_60">
+         <property name="text">
+          <string>Customer ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_CustomerID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_61">
+         <property name="text">
+          <string>Customer Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_CustomerType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_62">
+         <property name="text">
+          <string>Vehicle ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_VehicleID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_63">
+         <property name="text">
+          <string>Vehicle Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_VehicleType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_64">
+         <property name="text">
+          <string>Employee ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_EmpID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_66">
+         <property name="text">
+          <string>Driver Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRentalRequest_DriverRequested">
+         <item>
+          <property name="text">
+           <string>Yes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>No</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_67">
+         <property name="text">
+          <string>Driver Request ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_DriverRequestID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_69">
+         <property name="text">
+          <string>Daily Rate</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_DailyRate"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_75">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>491</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Rental Request ID to Start Editing  current Request</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="UpdateRentalRequest_tableView_Submit">
+      <property name="geometry">
+       <rect>
+        <x>1390</x>
+        <y>350</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_76">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>360</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save all Edits Made</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>360</y>
+        <width>431</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <widget class="QLabel" name="label_65">
+         <property name="text">
+          <string>Date Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateRentalRequest_DateRequested"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_72">
+         <property name="text">
+          <string>Date Start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateRentalRequest_DateStart"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_73">
+         <property name="text">
+          <string>Date End</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateRentalRequest_DateEnd"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_68">
+         <property name="text">
+          <string>Days To Be Rented</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_DaysRentPeriod"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_71">
+         <property name="text">
+          <string>Payment Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRentalRequest_PaymentStatus">
+         <item>
+          <property name="text">
+           <string>Paid</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Not Paid</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_70">
+         <property name="text">
+          <string>Total Cost</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateRentalRequest_TotalCost"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_74">
+         <property name="text">
+          <string>Approval Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateRentalRequest_ApprovalStatus">
+         <item>
+          <property name="text">
+           <string>Approved</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Not Approved</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_9">
      <widget class="QLabel" name="label_11">
@@ -645,12 +1674,84 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_77">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>491</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Rental Request ID to be Deleted </string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="DeleteRentalRequest_tableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>1471</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_78">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>450</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Request ID to be deleted:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DeleteRentalRequest_ID">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>450</y>
+        <width>113</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_79">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>460</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="DeleteRentalRequest_Delete">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>450</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_10">
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>0</y>
         <width>191</width>
         <height>21</height>
@@ -677,6 +1778,58 @@
       <property name="text">
        <string>Back</string>
       </property>
+     </widget>
+     <widget class="QLabel" name="label_80">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>491</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Rental Request ID to Approve or Not Approve</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="ApproveRentalRequests_tableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>1471</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>400</y>
+        <width>404</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_81">
+         <property name="text">
+          <string>Rental Request ID to be approved </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="ApproveRentalRequest_ID"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ApproveRentalRequest_Approve">
+         <property name="text">
+          <string>Approve</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_11">
@@ -709,6 +1862,122 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>30</y>
+        <width>331</width>
+        <height>493</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QLabel" name="label_82">
+         <property name="text">
+          <string>Vehicle ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateMaintenanceRequest_VehicleID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_83">
+         <property name="text">
+          <string>Vehicle Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateMaintenanceRequest_VehicleType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_84">
+         <property name="text">
+          <string>Employee ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateMaintenanceRequest_EmpID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_85">
+         <property name="text">
+          <string>Date Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateMaintenanceRequest_DateRequested"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_86">
+         <property name="text">
+          <string>Approval Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="CreateMaintenanceRequest_ApprovalStatus">
+         <item>
+          <property name="text">
+           <string>Approved</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pending</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_87">
+         <property name="text">
+          <string>Maintenance ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateMaintenanceRequest_MaintenanceID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_88">
+         <property name="text">
+          <string>Approval Date</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="CreateMaintenanceRequest_ApprovalDate"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_89">
+         <property name="text">
+          <string>Notes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="CreateMaintenanceRequest_Notes"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="CreateMaintenanceRequest_Submit">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>540</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
       </property>
      </widget>
     </widget>
@@ -744,6 +2013,145 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>80</y>
+        <width>331</width>
+        <height>493</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QLabel" name="label_98">
+         <property name="text">
+          <string>Vehicle ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateMaintenanceRequest_VehicleID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_99">
+         <property name="text">
+          <string>Vehicle Type</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateMaintenanceRequest_VehicleType"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_100">
+         <property name="text">
+          <string>Employee ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateMaintenanceRequest_EmpID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_101">
+         <property name="text">
+          <string>Date Requested</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateMaintenanceRequest_DateRequested"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_102">
+         <property name="text">
+          <string>Approval Status</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="UpdateMaintenanceRequest_ApprovalStatus">
+         <item>
+          <property name="text">
+           <string>Approved</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pending</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_103">
+         <property name="text">
+          <string>Maintenance ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateMaintenanceRequest_MaintenanceID"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_104">
+         <property name="text">
+          <string>Approval Date</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="UpdateMaintenanceRequest_ApprovalDate"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_105">
+         <property name="text">
+          <string>Notes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="UpdateMaintenanceRequest_Notes"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_106">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>491</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Double Click the Maintenance Request ID to Edit</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="UpdateMaintenanceReq_tableView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>1061</width>
+        <height>481</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="UpdateMaintenanceReq_Save">
+      <property name="geometry">
+       <rect>
+        <x>1330</x>
+        <y>590</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_13">
      <widget class="QPushButton" name="Reports_Back">
@@ -762,8 +2170,8 @@
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>640</x>
-        <y>10</y>
+        <x>10</x>
+        <y>0</y>
         <width>201</width>
         <height>41</height>
        </rect>
@@ -777,43 +2185,82 @@
        <string>Reports Section</string>
       </property>
      </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>1301</width>
+        <height>451</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_107">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Type Of Reports</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>210</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>260</y>
+        <width>83</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>1240</x>
-      <y>850</y>
-      <width>171</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Update  Repair Requests</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>1040</x>
-      <y>850</y>
-      <width>171</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Create Rental Requests</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -821,7 +2268,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1505</width>
+     <width>1524</width>
      <height>25</height>
     </rect>
    </property>

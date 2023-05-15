@@ -72,6 +72,34 @@ private slots:
 
     void on_Go_Reports_Button_clicked();
 
+    void on_Create_Customer_Submit_2_clicked();
+
+    void on_Create_Customer_Clear_clicked();
+
+    void on_Update_Customer_Submit_clicked();
+
+    void on_Update_Customer_Clear_clicked();
+
+    void on_UpdateCustomer_RefreshTable_clicked();
+
+    void on_DeleteCustomer_Delete_Button_clicked();
+
+    void on_CreateRepairRequest_Submit_clicked();
+
+    void on_UpdateRepairRequest_Submit_clicked();
+
+    void on_CreateRentalRequest_Submit_clicked();
+
+    void on_UpdateRentalRequest_tableView_Submit_clicked();
+
+    void on_DeleteRentalRequest_Delete_clicked();
+
+    void on_ApproveRentalRequest_Approve_clicked();
+
+    void on_CreateMaintenanceRequest_Submit_clicked();
+
+    void on_UpdateMaintenanceReq_Save_clicked();
+
 private:
     Ui::Clerk *ui;
 };

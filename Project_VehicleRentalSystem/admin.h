@@ -2,6 +2,7 @@
 #define ADMIN_H
 
 #include <QMainWindow>
+#include <QDialog>
 
 
 namespace Ui {
@@ -54,6 +55,10 @@ private slots:
     void on_Delete_User_Back_clicked();
 
     void on_Logout_clicked();
+
+    void on_saveButton_clicked();
+
+    void on_closeButton_clicked();
 
 private:
     Ui::Admin *ui;
