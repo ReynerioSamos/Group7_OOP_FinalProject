@@ -7,6 +7,11 @@ Technician::Technician(QObject *parent)
     TypeOfTechnician="";
 }
 
+Technician::~Technician()
+{
+
+}
+
 Technician::Technician(int techid)
 {
     technicianID = techid;

@@ -5,3 +5,8 @@ Database::Database(QObject *parent)
 {
 
 }
+
+Database::~Database()
+{
+
+}

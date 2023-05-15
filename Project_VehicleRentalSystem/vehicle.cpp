@@ -1,22 +1,8 @@
 #include "vehicle.h"
 
+Vehicle::Vehicle(QObject *parent)
+    : QObject{parent}
 {
-    vehicleID= 0;
-    totalMiles = 0;
-    make = "";
-    model= "";
-    year = 0;
-    description = "";
-    num_of_passengers = 0;
-    transmissionID=0;
-    fuelTypeID=0;
-    drivetrainID=0;
-    transmission="";
-    fuelType="";
-    drivetrain="";
-    availability = false;
-    lastServiced = QDate::currentDate();
-
 }
 
 Vehicle::Vehicle(int vehicleid)
@@ -36,6 +22,11 @@ Vehicle::Vehicle(int vehicleid)
     drivetrain="";
     availability = false;
     lastServiced = QDate::currentDate();
+
+}
+
+Vehicle::~Vehicle()
+{
 
 }
 

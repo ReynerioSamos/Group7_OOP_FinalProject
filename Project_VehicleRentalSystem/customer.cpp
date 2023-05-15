@@ -21,6 +21,10 @@ Customer::Customer(int custid)
     email =         "";
     date_added = QDate::currentDate();
 }
+Customer::~Customer()
+{
+
+}
 
 
 void Customer::setCustomerID(int custid) {customerID = custid;}

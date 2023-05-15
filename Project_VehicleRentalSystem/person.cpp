@@ -17,7 +17,9 @@ Person::Person(int pid) : Person()
     email = "";
 }
 
-Person::~Person() {}
+Person::~Person() {
+
+}
 
 void Person::setPersonID(int persid) { PersonID = persid; }
 

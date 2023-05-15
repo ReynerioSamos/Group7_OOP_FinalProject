@@ -19,6 +19,11 @@ Employee::Employee(int empid)
     DateEmployed = QDate::currentDate();
 }
 
+Employee::~Employee()
+{
+
+}
+
 void Employee::setEmployeeID(int empid)
 {employeeID = empid; }
 

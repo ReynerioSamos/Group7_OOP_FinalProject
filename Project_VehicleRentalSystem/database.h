@@ -27,8 +27,6 @@
 #include "employee.h"
 #include "technician.h"
 
-#include "loginwindow.h"
-#include "loginwindow.h"
 
 #include "stringformatters.h"
 

@@ -3,10 +3,6 @@
 individual::individual(QObject *parent)
     : Customer{parent}
 {
-    individual_ID = 0;
-    firstName = "";
-    lastName = "";
-    dob = QDate::currentDate();
 }
 
 individual::individual(int indid)
@@ -17,7 +13,9 @@ individual::individual(int indid)
     dob = QDate::currentDate();
 }
 
-individual::~individual() {}
+individual::~individual() {
+
+}
 
 void individual::setIndividualID(int indID)
 { individual_ID = indID; }

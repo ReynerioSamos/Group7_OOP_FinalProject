@@ -28,6 +28,11 @@ Truck::Truck(int truckid)
     mpg = 0;
 }
 
+Truck::~Truck()
+{
+
+}
+
 void Truck::setTruckID(int truckid)
 { truckID=truckid; }
 

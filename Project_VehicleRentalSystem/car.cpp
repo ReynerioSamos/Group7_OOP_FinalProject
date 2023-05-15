@@ -3,11 +3,7 @@
 Car::Car(QObject *parent)
     : Vehicle{parent}
 {
-     carID = 0;
 
-     mpg_or_KwH = 0;
-
-     roadType = " ";
 }
 
 Car::Car(int carid)
@@ -17,6 +13,10 @@ Car::Car(int carid)
     mpg_or_KwH = 0;
 
     roadType = " ";
+}
+
+Car::~Car(){
+
 }
 
 void Car::setCarID(int carid)

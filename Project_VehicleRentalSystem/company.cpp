@@ -3,10 +3,6 @@
 Company::Company(QObject *parent)
     : Customer{parent}
 {
-    companyID   =    0;
-    companyName =    "";
-    dateFounded =    QDate::currentDate();
-
 }
 
 Company::Company(int compid)
@@ -14,6 +10,11 @@ Company::Company(int compid)
     companyID =     compid;
     companyName = "";
     dateFounded = QDate::currentDate();
+}
+
+Company::~Company()
+{
+
 }
 
 void Company::setCompanyID(int compid)

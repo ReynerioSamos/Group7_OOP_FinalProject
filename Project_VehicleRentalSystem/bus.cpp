@@ -1,17 +1,9 @@
 #include "bus.h"
 
-Bus::Bus(QObject *parent)
+Bus::Bus (QObject *parent)
     : Vehicle{parent}
 {
-    busID = 0;
-    bathroom = false;
-    AC = false;
-    busTypeID = 0;
-    busType= "";
-    mpg = 0;
-    length =0;
-    width =0;
-    height= 0;
+
 }
 
 Bus::Bus (int busid)
@@ -25,6 +17,9 @@ Bus::Bus (int busid)
     length =0;
     width =0;
     height= 0;
+}
+Bus::~Bus()
+{
 
 }
 

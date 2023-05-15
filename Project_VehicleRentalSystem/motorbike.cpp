@@ -12,6 +12,11 @@ Motorbike::Motorbike(QObject *parent)
     height=0;
 }
 
+Motorbike::~Motorbike()
+{
+
+}
+
 Motorbike::Motorbike(int bikeid)
 {
     bikeID =bikeid;

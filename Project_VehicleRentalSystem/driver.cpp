@@ -19,6 +19,10 @@ Driver::Driver(int driverid)
     notes="";
 }
 
+Driver::~Driver() {
+
+}
+
 void Driver::setDriverID(int driverid)
 { driverID = driverid; }
 
